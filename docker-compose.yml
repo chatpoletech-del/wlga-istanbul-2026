@@ -1,0 +1,38 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - CORS_ORIGINS=http://localhost:5173,http://localhost:3000
+    volumes:
+      - ./backend:/app
+      - chroma_data:/app/chroma_db
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  websocket:
+    build: ./realtime
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000
+      - VITE_WEBSOCKET_URL=http://localhost:3001
+    depends_on:
+      - backend
+      - websocket
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  chroma_data:

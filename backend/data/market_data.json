@@ -1,0 +1,11 @@
+[
+  {"region": "Global", "application": "Residential", "data_summary": "Global residential LPG demand is projected to reach 180 mtpa by 2030, driven by clean cooking in Asia and Africa."},
+  {"region": "Africa", "application": "Clean Cooking", "data_summary": "LPG consumption for clean cooking in Sub-Saharan Africa is expected to grow 8% annually; Nigeria, Kenya, and Ghana lead."},
+  {"region": "Asia Pacific", "application": "Residential", "data_summary": "India and Indonesia dominate residential LPG demand; PMUY and 3kg programmes continue to drive penetration."},
+  {"region": "Europe", "application": "Residential", "data_summary": "BioLPG and rLPG are gaining share in off-grid heating; EU taxonomy and RED III will shape demand."},
+  {"region": "Middle East", "application": "Trading", "data_summary": "MENA remains the largest LPG export region; Saudi Arabia and UAE are key suppliers to Asia and Africa."},
+  {"region": "North America", "application": "Residential", "data_summary": "US LPG exports set new records; domestic demand stable with growth in renewable LPG and RINs."},
+  {"region": "South America", "application": "Residential", "data_summary": "Brazil and Argentina lead LPG demand in LatAm; biogas and BioLPG projects are expanding."},
+  {"region": "Global", "application": "Autogas", "data_summary": "Autogas demand varies by region; Turkey and South Korea remain top markets; electrification is a long-term headwind."},
+  {"region": "Global", "application": "Industrial", "data_summary": "Industrial LPG use in petrochemicals (PDH) and process heat continues to grow, especially in China and Middle East."}
+]
